@@ -21,6 +21,10 @@ import streamlit as st
 # Custom CSS for styling
 st.markdown("""  
 <style>  
+    body {
+        background-color: white !important;
+        color: black !important;
+    }
     .main-header {
         font-size: 3rem !important;
         color: #1E3A8A;
