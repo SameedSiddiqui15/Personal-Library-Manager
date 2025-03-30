@@ -274,9 +274,9 @@ if nav_options == "View Library":
     st.session_state.current_view = 'library'
 elif nav_options == "Add Book":
     st.session_state.current_view = 'add'
-if nav_options == "Search Books":
+elif nav_options == "Search Books":
     st.session_state.current_view = 'search'
-if nav_options == "Library Statistics":
+elif nav_options == "Library Statistics":
     st.session_state.current_view = 'stats'
  
 st.markdown("<h1 class='main-header'>📚 Personal Library Manager By Sameed Siddiqui</h1>", unsafe_allow_html=True)
@@ -387,7 +387,7 @@ elif st.session_state.current_view == "search":
                 st.metric("Books Read", stats['read_books'] )
             with col3:
                 st.metric("Percentage Read", f"{stats['total_books'] : 1f}%" )
-            create_visualization()
+            create_visualization(stats)
 
             if stats['authors']:
                 st.markdown("<h3>Top Authors</h3>", unsafe_allow_html=True)
