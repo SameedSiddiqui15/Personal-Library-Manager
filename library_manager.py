@@ -359,7 +359,7 @@ elif st.session_state.current_view == "search":
                 time.sleep(0.5)
                 search_books(search_term, search_by)
     if hasattr(st.session_state, "search_results"):
-        if st.session_state.state_results:
+        if st.session_state.search_results:
             st.markdown(f"<h3>Found {len(st.session_state.search_results)} results:</h3>", unsafe_allow_html=True)
 
             for i,book in enumerate(st.session_state.search_results):
