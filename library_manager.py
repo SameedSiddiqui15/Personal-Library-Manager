@@ -379,7 +379,7 @@ elif st.session_state.current_view == "search":
         if not st.session_state.library:
             st.markdown("<div class='warning-message'>Your library is empty. Add some books to see statistics!</div>", unsafe_allow_html=True)
         else :
-            stats = get_library_state()
+            stats = get_library_stats()
             col1 ,col2 ,col3 = st.columns(3)
             with col1:
                 st.metric("Total Books", stats['total_books'] )
