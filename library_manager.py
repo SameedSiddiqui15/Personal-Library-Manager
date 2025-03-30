@@ -164,7 +164,7 @@ def search_books(search_term,search_by):
     st.session_state.search_results = results
 
 
-def get_library_state():
+def get_library_stats():
     total_books = len(st.session_state.library)
     read_books = sum(1 for book in st.session_state.library if book['read_status'])
     percent_read = (read_books / total_books * 100) if total_books > 0 else 0
