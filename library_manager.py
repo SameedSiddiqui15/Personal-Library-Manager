@@ -204,7 +204,7 @@ def get_library_state():
     }
 
 def create_visualization(stats):
-    if stats['total_book'] > 0:
+    if stats['total_books'] > 0:
         fig_read_status = go.Figure(data=[go.Pie(
             labels=['Read','Unread'],
             values = [stats['read_books'], stats['total_books'] - stats['read_books']],
