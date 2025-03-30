@@ -208,7 +208,7 @@ def create_visualization(stats):
         fig_read_status = go.Figure(data=[go.Pie(
             labels=['Read','Unread'],
             values = [stats['read_books'], stats['total_books'] - stats['read_books']],
-            hole = 4,
+            hole = 0.4,
             marker_colors = ['#10B981' , '#F87171']
         )]) 
         fig_read_status.update_layout(
