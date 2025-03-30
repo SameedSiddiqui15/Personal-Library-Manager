@@ -184,11 +184,11 @@ def get_library_stats():
         else:
             authors[book['author']] = 1
 
-        decades = (book['publication_year'] // 10) * 10
-        if book['decade'] in decades:
-            decades[book['decade']] += 1
+        decade = (book['publication_year'] // 10) * 10
+         if decade in decades:
+            decades[decade] += 1
         else:
-            decades[book['decade']] = 1
+            decades[decade] = 1
 
     genres = dict(sorted(genres.items(), key= lambda x: x[1],reverse=True))
     authors = dict(sorted(authors.items(), key= lambda x: x[1],reverse=True))
@@ -238,7 +238,7 @@ def create_visualization(stats):
             st.plotly_chart(fig_genres,use_container_width=True)
         if stats['decades']:
             decades_df =pd.DataFrame({
-                'Decade' : [f"{decade}s" for decades in stats['decades'].keys()],
+                'Decade' : [f"{decade}s" for decade in stats['decades'].keys()],
                 'Count' : list(stats['decades'].values())
             })
             fig_decades = px.line(
