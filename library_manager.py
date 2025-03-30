@@ -185,7 +185,7 @@ def get_library_stats():
             authors[book['author']] = 1
 
         decade = (book['publication_year'] // 10) * 10
-         if decade in decades:
+        if decade in decades:
             decades[decade] += 1
         else:
             decades[decade] = 1
