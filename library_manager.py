@@ -339,7 +339,7 @@ elif st.session_state.current_view == "library":
                             st.rerun()
                 with col2:
                     new_status = not book['read_status']
-                    status_label = "Mark As Read" if not book['read status'] else "Mark As Unread"
+                    status_label = "Mark As Read" if not book['read_status'] else "Mark As Unread"
                     if st.button(status_label,key =f"status_{i}",use_container_width=True):
                         st.session_state.library[i]['read_status'] =new_status
                         save_library()
