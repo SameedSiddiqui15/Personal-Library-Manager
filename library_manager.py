@@ -102,7 +102,7 @@ if 'search_results' not in st.session_state:
 if 'book_added' not in st.session_state:
     st.session_state.book_added = False
 if 'book_removed' not in st.session_state:
-    st.session_state.removed = False
+    st.session_state.book_removed = False
 if 'current_view' not in st.session_state:
     st.session_state.current_view = "library"
 
